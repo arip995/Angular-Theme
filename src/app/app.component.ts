@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, HostBinding } from '@angular/core';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +7,12 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'tailwind';
+  public isDark: boolean = true;
+  @HostBinding('class')
+  get themeMode(): string {
+    return this.isDark ? 'dark' : 'light'
+  }
+  switchMode(event: Event){
+    this.isDark = !this.isDark;
+  }
 }

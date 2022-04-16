@@ -1,6 +1,7 @@
 module.exports = {
-  content: ['./src/**/*.{html,js}', './node_modules/tw-elements/dist/js/**/*.js'],
+  content: ["./layouts/**/*.html", "./content/**/*.md", "./content/**/*.html", "./src/**/*.js",'./src/**/*.{html,ts}'],
   plugins: [
-    require('tw-elements/dist/plugin')
-  ]
+    require('flowbite/plugin')
+  ],
+  darkMode: 'class',
 }
