@@ -7,7 +7,7 @@ import { Component, HostBinding } from '@angular/core';
 })
 export class AppComponent {
   title = 'tailwind';
-  public isDark: boolean = true;
+  public isDark: boolean = false;
   @HostBinding('class')
   get themeMode(): string {
     return this.isDark ? 'dark' : 'light'
