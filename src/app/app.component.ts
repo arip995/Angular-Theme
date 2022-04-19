@@ -1,4 +1,5 @@
 import { Component, HostBinding } from '@angular/core';
+import { TodoService } from './app.srvice';
 
 @Component({
   selector: 'app-root',
@@ -6,6 +7,10 @@ import { Component, HostBinding } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
+  constructor(private todoService: TodoService){
+
+  }
+  data$ = this.todoService.todo$;
   title = 'tailwind';
   public isDark: boolean = false;
   @HostBinding('class')
