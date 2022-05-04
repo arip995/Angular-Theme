@@ -20,4 +20,8 @@ export class AppComponent {
   switchMode(event: Event){
     this.isDark = !this.isDark;
   }
+
+  ratingValue(value:number){
+    console.log(value);
+  }
 }
