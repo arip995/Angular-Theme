@@ -1,4 +1,4 @@
-import { Component, HostBinding } from '@angular/core';
+import { Component, HostBinding, Input, OnChanges, OnInit, SimpleChange } from '@angular/core';
 import { TodoService } from './app.srvice';
 
 @Component({
@@ -6,7 +6,8 @@ import { TodoService } from './app.srvice';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
-export class AppComponent {
+export class AppComponent{
+  
   constructor(private todoService: TodoService){
 
   }
@@ -21,7 +22,8 @@ export class AppComponent {
     this.isDark = !this.isDark;
   }
 
-  ratingValue(value:number){
-    console.log(value);
+  starValue(event: any){
+    console.log(event)
   }
+
 }
