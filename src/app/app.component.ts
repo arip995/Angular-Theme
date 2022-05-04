@@ -6,9 +6,9 @@ import { TodoService } from './app.srvice';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
-export class AppComponent{
-  
-  constructor(private todoService: TodoService){
+export class AppComponent {
+
+  constructor(private todoService: TodoService) {
 
   }
   data$ = this.todoService.todo$;
@@ -18,11 +18,11 @@ export class AppComponent{
   get themeMode(): string {
     return this.isDark ? 'dark' : 'light'
   }
-  switchMode(event: Event){
+  switchMode(event: Event) {
     this.isDark = !this.isDark;
   }
 
-  starValue(event: any){
+  starValue(event: any) {
     console.log(event)
   }
 

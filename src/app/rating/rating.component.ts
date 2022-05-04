@@ -6,13 +6,13 @@ import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
   styleUrls: ['./rating.component.scss']
 })
 export class RatingComponent implements OnInit {
-  @Output() stars = new EventEmitter<any>();  
+  @Output() stars = new EventEmitter<any>();
   constructor() { }
 
   ngOnInit(): void {
   }
 
-  ratingValue(star:number){
+  ratingValue(star: number) {
     this.stars.emit(star)
   }
 
