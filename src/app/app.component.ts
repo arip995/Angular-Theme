@@ -1,5 +1,5 @@
 import { Component, HostBinding, Input, OnChanges, OnInit, SimpleChange } from '@angular/core';
-import { TodoService } from './app.srvice';
+import { TodoService } from './app.service';
 
 @Component({
   selector: 'app-root',
