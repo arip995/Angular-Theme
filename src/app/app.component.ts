@@ -18,6 +18,9 @@ export class AppComponent {
   get themeMode(): string {
     return this.isDark ? 'dark' : 'light'
   }
+  /**
+   * @param  {Event} event
+   */
   switchMode(event: Event) {
     this.isDark = !this.isDark;
   }

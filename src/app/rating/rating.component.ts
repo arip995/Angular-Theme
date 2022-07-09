@@ -11,8 +11,8 @@ export class RatingComponent implements OnInit {
 
   ngOnInit(): void {
   }
-
-  ratingValue(star: number) {
+  
+  ratingValue(star: number): any {
     this.stars.emit(star)
   }
 
